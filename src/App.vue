@@ -1,6 +1,16 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+//Simple calculation of pi
+function calculatePi(n) {
+  let pi = 0;
+  for (let i = 0; i < n; i++) {
+    pi += Math.pow(-1, i) / (2 * i + 1);
+  }
+  return pi * 4;
+}
+
+console.log(calculatePi(1000000));
 </script>
 
 <template>
